@@ -30,3 +30,10 @@ veremos la diferencia entre establecer a una propiedad setvalue el cual es estri
 1) crearemos un boton en nustra vista el cual llamara nuestro metodo "loadApiData".
 2) dentro de nuestro metodo estableceremos todos los valores que tendra nuestra propiedad registrationForm por medio de setvalue.
 3) crearemos otro metodo llamado loadApiData2 el cual solo establecera algunos de los valores de nuestra propiedad por medio de patchvalue el cual es flexible.
+
+## FormBuilder Service
+FormBuilder proporciona azúcar sintáctico que acorta la creación de instancias de un FormControl, FormGroup o FormArray. Reduce la cantidad de repeticiones necesarias para construir formas complejas.
+
+1) dentro de nuestro componente .ts importamos formbuilder.
+2) lo injectamos en nuestro constructor. 
+3) declaramos la propiedad "registrationForm" que sera igual a la propiedad injectada en nuestro constructor y la cual le pasaremos los parametros.
