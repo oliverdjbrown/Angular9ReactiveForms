@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-adding-form-html',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adding-form-html.component.css']
 })
 export class AddingFormHtmlComponent implements OnInit {
+
+  registrationForm =  new FormGroup({
+    userName: new FormControl('Oliver'),
+    password: new FormControl(''),
+    confirmPassword: new FormControl('')
+  });
 
   constructor() { }
 
