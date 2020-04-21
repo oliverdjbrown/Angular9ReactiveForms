@@ -19,6 +19,27 @@ export class AddingFormHtmlComponent implements OnInit {
     })
   });
 
+  loadApiData() {
+    this.registrationForm.setValue({
+      userName: 'Bruce',
+      password: 'test',
+      confirmPassword: 'test',
+      address: {
+        city: 'City',
+        state: 'State',
+        postalCode: '123456'
+      }
+    });
+  }
+
+  loadApiData2() {
+    this.registrationForm.patchValue({
+      userName: 'Bruce',
+      password: 'test',
+      confirmPassword: 'test'
+    });
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -23,3 +23,10 @@ Podemos hacer que formularios muy grandes esten divididos por secciones lo que e
 1) dentro del formulario ya creado "registrationForm" agregaremos una seccion utilizando un div tag y luego creando 3 nuevos inputs.
 2) en nuestra propiedad "registrationForm" de nuestro componente .ts crearemos un nuevo grupo llamado address especificando sus parametros.
 3) al divtag de nuestro div en la vista agregamos que formGroupName sera igual a address.
+
+## Managing Control Values
+veremos la diferencia entre establecer a una propiedad setvalue el cual es estricto porque no se deben especificar todos los valores, patchvalue por el contrario es mas flexible permitiendo algunos valores.
+
+1) crearemos un boton en nustra vista el cual llamara nuestro metodo "loadApiData".
+2) dentro de nuestro metodo estableceremos todos los valores que tendra nuestra propiedad registrationForm por medio de setvalue.
+3) crearemos otro metodo llamado loadApiData2 el cual solo establecera algunos de los valores de nuestra propiedad por medio de patchvalue el cual es flexible.
