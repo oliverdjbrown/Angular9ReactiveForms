@@ -17,3 +17,9 @@ El formulario es representado por un modelo en la clase de nuestro componente, p
 3) en la vista de nuestro componente asociamos formgroup a nuestro formulario y sera igual a nuestra propiedad declarada para manejar los campos.
 4) por ultimo utilizaremos la interpolacion para mostrar los valores de registrationForm y utilizaremos jsonPipe.
 
+## Nesting Form Groups
+Podemos hacer que formularios muy grandes esten divididos por secciones lo que es mas facil de manejar
+
+1) dentro del formulario ya creado "registrationForm" agregaremos una seccion utilizando un div tag y luego creando 3 nuevos inputs.
+2) en nuestra propiedad "registrationForm" de nuestro componente .ts crearemos un nuevo grupo llamado address especificando sus parametros.
+3) al divtag de nuestro div en la vista agregamos que formGroupName sera igual a address.
