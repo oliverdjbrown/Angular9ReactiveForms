@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder} from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-builder-service',
-  templateUrl: './form-builder-service.component.html',
-  styleUrls: ['./form-builder-service.component.css']
+  selector: 'app-validation',
+  templateUrl: './validation.component.html',
+  styleUrls: ['./validation.component.css']
 })
-export class FormBuilderServiceComponent implements OnInit {
+export class ValidationComponent implements OnInit {
+
+  get userName() {
+    return this.registrationForm.get('userName');
+  }
 
   registrationForm = this.fb.group({
-    userName: ['Oliver'],
+    userName: ['', [Validators.required, Validators.minLength(3)]],
     password: [''],
     confirmPassword: [''],
     address: this.fb.group({

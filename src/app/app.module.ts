@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddingFormHtmlComponent } from './adding-form-html/adding-form-html.component';
 import { FormBuilderServiceComponent } from './form-builder-service/form-builder-service.component';
+import { ValidationComponent } from './validation/validation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddingFormHtmlComponent,
-    FormBuilderServiceComponent
+    FormBuilderServiceComponent,
+    ValidationComponent
   ],
   imports: [
     BrowserModule,

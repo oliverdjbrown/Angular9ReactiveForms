@@ -1,3 +1,4 @@
+import { ValidationComponent } from './validation/validation.component';
 import { FormBuilderServiceComponent } from './form-builder-service/form-builder-service.component';
 import { AddingFormHtmlComponent } from './adding-form-html/adding-form-html.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: 'adding-form-html', component: AddingFormHtmlComponent },
   { path: 'form-builder-service', component: FormBuilderServiceComponent },
+  { path: 'validation', component: ValidationComponent },
   { path: '**', component: AppComponent}
 ];
 

@@ -37,3 +37,13 @@ FormBuilder proporciona azúcar sintáctico que acorta la creación de instancia
 1) dentro de nuestro componente .ts importamos formbuilder.
 2) lo injectamos en nuestro constructor. 
 3) declaramos la propiedad "registrationForm" que sera igual a la propiedad injectada en nuestro constructor y la cual le pasaremos los parametros.
+
+## Simple Validation
+En un formulario reactivo, la fuente de la verdad es la clase componente. En lugar de agregar validadores a través de atributos en la plantilla, agrega funciones de validación directamente al modelo de control de formulario en la clase de componente. Angular llama a estas funciones cada vez que cambia el valor del control.
+
+1) importamos al principio de nuestro componente 'Validators'.
+2) utilisaremos Validators.required para especificar que es una validacion requerida.
+3) en nuestra vista agregamos una clase de bootstrap para la validacion visual y en que casos esta debe reaccionar.
+4) utilizando validaciones dentro de la etiqueta small y por medio del propertybinding de la la clase de bootstrap podemos mostrar un mensaje especificando los casos
+5) para hacer mas de una validacion en el campo del formulario procedemos a utilizar un arreglo en el formulario (componente ts) y especificar las validaciones.
+6) por ultimo utilizando la directiva ngif podemos hacer que se muestren mensajes dependiendo de la condicion.
