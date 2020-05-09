@@ -47,3 +47,16 @@ En un formulario reactivo, la fuente de la verdad es la clase componente. En lug
 4) utilizando validaciones dentro de la etiqueta small y por medio del propertybinding de la la clase de bootstrap podemos mostrar un mensaje especificando los casos
 5) para hacer mas de una validacion en el campo del formulario procedemos a utilizar un arreglo en el formulario (componente ts) y especificar las validaciones.
 6) por ultimo utilizando la directiva ngif podemos hacer que se muestren mensajes dependiendo de la condicion.
+
+## Custom Validation
+
+Cuando se utilizan formularios reactivos en angular, es muy fácil definir validadores personalizados, ya que no son más que funciones regulares. Puede crear la función para su validador personalizado dentro de su archivo de componente directamente si el validador no se usará en otro lugar, pero aquí asumiremos la reutilización y crearemos un validador en un archivo separado.
+
+1) creamos un archivo  user-name.validator.TS en el cual escribiremos nuestra funcion.
+2) importamos AbstractControl.
+3) creamos nuestra funcion con nuestros parametros para la validacion del campo.
+4) nuestra funcion debe ser exportada para asi poder invocarla.
+5) en nuestro componente Ts del formulario agregamos nuestra funcion creada para validar en el arreglo de validaciones del campo userName.
+6) importamos el componente ts que posee la validacion.
+7) aplicamos una condicion en nuestro archivo html que valide el campo.
+8) para poder crear una funcion que valide varios parametros, refactorizamos nuestra funcion de tal forma que acepte los parametros que le pasemos directamente desde nuestro componente ts.
