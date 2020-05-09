@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AddingFormHtmlComponent } from './adding-form-html/adding-form-html.component';
 import { FormBuilderServiceComponent } from './form-builder-service/form-builder-service.component';
 import { ValidationComponent } from './validation/validation.component';
+import { ConditionalValidationComponent } from './conditional-validation/conditional-validation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddingFormHtmlComponent,
     FormBuilderServiceComponent,
-    ValidationComponent
+    ValidationComponent,
+    ConditionalValidationComponent
   ],
   imports: [
     BrowserModule,

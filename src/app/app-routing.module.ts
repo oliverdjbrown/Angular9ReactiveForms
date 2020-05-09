@@ -1,3 +1,4 @@
+import { ConditionalValidationComponent } from './conditional-validation/conditional-validation.component';
 import { ValidationComponent } from './validation/validation.component';
 import { FormBuilderServiceComponent } from './form-builder-service/form-builder-service.component';
 import { AddingFormHtmlComponent } from './adding-form-html/adding-form-html.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'adding-form-html', component: AddingFormHtmlComponent },
   { path: 'form-builder-service', component: FormBuilderServiceComponent },
   { path: 'validation', component: ValidationComponent },
+  { path: 'conditional-validation', component: ConditionalValidationComponent },
   { path: '**', component: AppComponent}
 ];
 

@@ -62,6 +62,7 @@ export class ValidationComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -70,3 +70,12 @@ nos permite hacer validaciones de varios campos a la vez como por ejemplo valida
 5) En nuestra vista dentro de nuestro input de conform Password aplicaremos la clase de bootstrap que validara si se cumplen nuestras condiciones y mostrara un aviso.
 6) por ultimo mejoraremos nuestra funcion validando que el mensaje se muestre solo si ambos campos tienen texto.
 
+## Conditional Validation 
+nos permite hacer validaciones dinamicas lo que quiere decir que se aplicaran solo bajo ciertas circunstancias.
+
+1) agregaremos en nuestra vista html un campo para email y un checkbox.
+2) en nuestro componente .ts agregamos a nuestro formbuilder email y el checkbox.
+3) movemos nuestro codigo del formulario a el metodo de inicio ngOnInit pero antes declarando fuera la propiedad.
+4) agregamos un metodo observable dentro del metetodo ngOnInit que valide si el checkbox esta activo y validara o no de acuerodo a eso.
+5) agregagmos un metodo get que consiga el valor del email en nuestro formulario.
+6) en nuestra vista html, agregamos la validacion de la clase bootstrap y en vase al resultado mostrara nuestra etiqueta smart.
