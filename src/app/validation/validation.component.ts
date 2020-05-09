@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { forbiddenNameValidator } from '../shared/user-name.validator';
+import { PasswordValidator } from '../shared/password.validator';
 
 @Component({
   selector: 'app-validation',
@@ -22,7 +23,7 @@ export class ValidationComponent implements OnInit {
       state: [''],
       postalCode: ['']
     })
-  });
+  }, {validator: PasswordValidator});
 
   /*
     registrationForm =  new FormGroup({

@@ -49,14 +49,24 @@ En un formulario reactivo, la fuente de la verdad es la clase componente. En lug
 6) por ultimo utilizando la directiva ngif podemos hacer que se muestren mensajes dependiendo de la condicion.
 
 ## Custom Validation
-
 Cuando se utilizan formularios reactivos en angular, es muy fácil definir validadores personalizados, ya que no son más que funciones regulares. Puede crear la función para su validador personalizado dentro de su archivo de componente directamente si el validador no se usará en otro lugar, pero aquí asumiremos la reutilización y crearemos un validador en un archivo separado.
 
 1) creamos un archivo  user-name.validator.TS en el cual escribiremos nuestra funcion.
 2) importamos AbstractControl.
-3) creamos nuestra funcion con nuestros parametros para la validacion del campo.
+3) creamos nuestra funcion con nuestros parametros para la validacion del campo la cual validara que el usuario no se llame "admin".
 4) nuestra funcion debe ser exportada para asi poder invocarla.
 5) en nuestro componente Ts del formulario agregamos nuestra funcion creada para validar en el arreglo de validaciones del campo userName.
 6) importamos el componente ts que posee la validacion.
 7) aplicamos una condicion en nuestro archivo html que valide el campo.
 8) para poder crear una funcion que valide varios parametros, refactorizamos nuestra funcion de tal forma que acepte los parametros que le pasemos directamente desde nuestro componente ts.
+
+## Cross Field Validation
+nos permite hacer validaciones de varios campos a la vez como por ejemplo validar si los campos de contraseña coinciden.
+
+1) creamos un archivo  password.validator.TS en el cual escribiremos nuestra funcion.
+2) importamos AbstractControl.
+3) creamos nuestra funcion con nuestros parametros para la validacion de los campos password y confirmPassowrd, esta funcion validara que los campos no esten vacios y que ambos sean iguales.
+4) nuestra validacion se debe colocar en el formGrop.
+5) En nuestra vista dentro de nuestro input de conform Password aplicaremos la clase de bootstrap que validara si se cumplen nuestras condiciones y mostrara un aviso.
+6) por ultimo mejoraremos nuestra funcion validando que el mensaje se muestre solo si ambos campos tienen texto.
+
