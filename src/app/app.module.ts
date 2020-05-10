@@ -8,6 +8,7 @@ import { FormBuilderServiceComponent } from './form-builder-service/form-builder
 import { ValidationComponent } from './validation/validation.component';
 import { ConditionalValidationComponent } from './conditional-validation/conditional-validation.component';
 import { DynamicFormControlComponent } from './dynamic-form-control/dynamic-form-control.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DynamicFormControlComponent } from './dynamic-form-control/dynamic-form
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

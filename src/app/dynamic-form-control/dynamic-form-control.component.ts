@@ -1,3 +1,4 @@
+import { RegistrationService } from './../registration.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormArray } from '@angular/forms';
 import { forbiddenNameValidator } from '../shared/user-name.validator';
@@ -55,6 +56,13 @@ export class DynamicFormControlComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    console.log(this.registrationForm.value);
+    this.registrationService.register(this.registrationForm.value).subscribe(
+      response => console.log('Success!', response), error => console.log('Error!', error)
+    );
+  }
+
   loadApiData2() {
     this.registrationForm.patchValue({
       userName: 'Bruce',
@@ -63,7 +71,7 @@ export class DynamicFormControlComponent implements OnInit {
     });
   }
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
     this.registrationForm = this.fb.group({

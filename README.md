@@ -81,6 +81,7 @@ nos permite hacer validaciones dinamicas lo que quiere decir que se aplicaran so
 6) en nuestra vista html, agregamos la validacion de la clase bootstrap y en vase al resultado mostrara nuestra etiqueta smart.
 
 ## Dynamic Form Controls
+FormArray es un poco como FormGroup y se usa de manera muy similar, la diferencia es que se usa como una matriz que envuelve una cantidad arbitraria de FormControl, FormGroup o incluso otras instancias de FormArray.
 
 1) Importamos en nuestro componente FormArray.
 2) en nuestro formulario por medio de form builder agregaremos una propiedad la cual sera un arreglo. 
@@ -88,3 +89,16 @@ nos permite hacer validaciones dinamicas lo que quiere decir que se aplicaran so
 4) ahora crearemos un metodo al cual vamos a llamar para de forma dinamica insertar controles en nuestro form array.
 5) agregamos un boton en nuestra vista que llamara el metodo para agregar los controles.
 6) iteraremos nuestro arreglo de formulario para mostrar los campos.
+
+## Submitting Form Data
+
+1) en propertybinding de nuestro formgroup especificamos el metodo ngSubmit.
+2) en nuestra clase .TS escribimos nuestro metodo para visualizar la informacion en la consola.
+3) creamos el servicio "registration", importamos http client y luego lo inyectamos en el constructor. 
+4) en appModule.ts tenemos que importar httpClientModule y agregarlo al arreglo de los imports.
+5) en nuestro servicio agregaos una propiedad que sera igual a la url del servicio.
+6) escribimos nuestro metodo para hacer el post de la informacion.
+7) importamos nuestro servicio en nuestro componente .ts y lo inyectamos en el constructor
+8) dentro del metodo onSubmit nos suscribiremos a nuestro observable.
+9) en nuestra vista html usaremos propertybinding para que el bototon registrar este habilitado solo si el formulario es valido.
+10) por ultimo iniciamos nuestro servidor express y enviamos los datos para ver que todo salio bien.
