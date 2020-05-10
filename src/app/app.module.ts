@@ -7,6 +7,7 @@ import { AddingFormHtmlComponent } from './adding-form-html/adding-form-html.com
 import { FormBuilderServiceComponent } from './form-builder-service/form-builder-service.component';
 import { ValidationComponent } from './validation/validation.component';
 import { ConditionalValidationComponent } from './conditional-validation/conditional-validation.component';
+import { DynamicFormControlComponent } from './dynamic-form-control/dynamic-form-control.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ConditionalValidationComponent } from './conditional-validation/conditi
     AddingFormHtmlComponent,
     FormBuilderServiceComponent,
     ValidationComponent,
-    ConditionalValidationComponent
+    ConditionalValidationComponent,
+    DynamicFormControlComponent
   ],
   imports: [
     BrowserModule,

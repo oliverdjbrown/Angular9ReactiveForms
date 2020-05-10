@@ -1,3 +1,4 @@
+import { DynamicFormControlComponent } from './dynamic-form-control/dynamic-form-control.component';
 import { ConditionalValidationComponent } from './conditional-validation/conditional-validation.component';
 import { ValidationComponent } from './validation/validation.component';
 import { FormBuilderServiceComponent } from './form-builder-service/form-builder-service.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'form-builder-service', component: FormBuilderServiceComponent },
   { path: 'validation', component: ValidationComponent },
   { path: 'conditional-validation', component: ConditionalValidationComponent },
+  { path: 'dynamic-form-control', component: DynamicFormControlComponent },
   { path: '**', component: AppComponent}
 ];
 

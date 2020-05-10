@@ -79,3 +79,12 @@ nos permite hacer validaciones dinamicas lo que quiere decir que se aplicaran so
 4) agregamos un metodo observable dentro del metetodo ngOnInit que valide si el checkbox esta activo y validara o no de acuerodo a eso.
 5) agregagmos un metodo get que consiga el valor del email en nuestro formulario.
 6) en nuestra vista html, agregamos la validacion de la clase bootstrap y en vase al resultado mostrara nuestra etiqueta smart.
+
+## Dynamic Form Controls
+
+1) Importamos en nuestro componente FormArray.
+2) en nuestro formulario por medio de form builder agregaremos una propiedad la cual sera un arreglo. 
+3) crearemos un metodo get el cual se encargara de retornar nuestra propiedad como un form array.
+4) ahora crearemos un metodo al cual vamos a llamar para de forma dinamica insertar controles en nuestro form array.
+5) agregamos un boton en nuestra vista que llamara el metodo para agregar los controles.
+6) iteraremos nuestro arreglo de formulario para mostrar los campos.
