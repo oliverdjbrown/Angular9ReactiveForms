@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ConditionalValidationComponent } from './conditional-validation.component';
 
@@ -6,7 +6,7 @@ describe('ConditionalValidationComponent', () => {
   let component: ConditionalValidationComponent;
   let fixture: ComponentFixture<ConditionalValidationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ConditionalValidationComponent ]
     })
